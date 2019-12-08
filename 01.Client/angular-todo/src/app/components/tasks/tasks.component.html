@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="margin-bottom: 1%;">
+    <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item">
+                  <a routerLink="/home" class="btn btn-dark active" role="button" routerLinkActive="active">Home Page</a>
+                </li> -->
+        <li class="nav-item" style="margin-left: 10px;">
+            <a [routerLink]="['/tasks/list',{completed: false}]" routerLinkActive="router-link-active"
+                class="btn btn-dark active" role="button">In Progress</a>
+        </li>
+        <li class="nav-item" style="margin-left: 10px;">
+            <a [routerLink]="['/tasks/list',{completed: true}]" class="btn btn-dark active" role="button"
+                routerLinkActive="active">Completed</a>
+        </li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>

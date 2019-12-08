@@ -1,0 +1,97 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <form>
+                <div class="form-group">
+                    <label for="">New Todo</label>
+
+                    <input type="text" class="form-control" name="title" placeholder="Input your task"
+                        [(ngModel)]="oneTask1.title" [ngModelOptions]="{standalone: true}">
+                </div>
+                <button type="button" class="btn btn-success" (click)="onAddTodo()">Add</button>
+            </form>
+        </div>
+    </div>
+</div> -->
+<div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+        <div class="user_card">
+            <div class="d-flex justify-content-center">
+                <div class="brand_logo_container">
+                    <img src="https://www.carechartsuk.co.uk/wp-content/uploads/2014/10/book-reviews-web.png"
+                        class="brand_logo" alt="Logo">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center form_container">
+                <form [formGroup]="formAdd">
+                    <div class="form-group">
+                        <!-- <div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div> checked data-toggle="toggle" [(ngModel)]="oneTask1.title" [ngModelOptions]="{standalone: true}" -->
+                        <input type="text" class="form-control" formControlName="todo" [(ngModel)]="oneTask1.title" placeholder="Input your task">
+                            <div class="alert-danger"
+                            *ngIf="formAdd.get('todo').dirty && formAdd.get('todo').errors">
+                            <div *ngIf="formAdd.get('todo').errors['required']; else Invalid"> Vui lòng nhập task</div>
+                            <ng-template #Invalid>
+                                    <div *ngIf="formAdd.get('email').invalid">Email
+                                            Vui lòng nhập task</div>
+                                </ng-template>
+                        </div>       
+                    </div>
+
+                    <br>
+                </form>
+            </div>
+            <div class="d-flex justify-content-center mt-3 login_container">
+                <button type="submit" [disabled]="formAdd.invalid" class="btn login_btn" (click)="onAddTodo()">Add</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- <div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Sign In</h3>
+                <div class="d-flex justify-content-end social_icon">
+                    <span><i class="fab fa-facebook-square"></i></span>
+                    <span><i class="fab fa-google-plus-square"></i></span>
+                    <span><i class="fab fa-twitter-square"></i></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="username">
+
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="password">
+                    </div>
+                    <div class="row align-items-center remember">
+                        <input type="checkbox">Remember Me
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn float-right login_btn">
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                    Don't have an account?<a href="#">Sign Up</a>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="#">Forgot your password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
