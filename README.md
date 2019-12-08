@@ -15,3 +15,8 @@ json-server https://github.com/typicode/json-server
 <pre><code>json-server --watch db.json --port 3000</code></pre>
 GET - POST - PUT - PATCH - DELETE APIs are created for resources (posts - comments - profile)
 
+Angular Client
+<ul>
+  <li>Start Angular</li>
+</ul>
+<pre><code>ng serve -o --port 4200</code></pre>
