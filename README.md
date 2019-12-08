@@ -1,7 +1,7 @@
 # Angular_TodoList_MockAPI
 json-server https://github.com/typicode/json-server
 
-Install npm install -g json-server
+Install <code>npm install -g json-server</code>
 
 Setup Create a db.json which contains sample data for Resources. json-server will create API for those resources
 
